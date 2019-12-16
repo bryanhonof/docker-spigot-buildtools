@@ -5,6 +5,13 @@ FROM openjdk:$JAVA_VERSION-alpine AS buildtools
 
 ARG SPIGOT_REV=1.15
 
+LABEL maintainer = "Bryan Honof" \
+    maintainer.email = "bryan@bryanhonof.be" \
+    maintainer.website = "https://www.bryanhonof.be" \
+    version = "1.15" \
+    description = "Spigot buildtools in a container!" \
+    dockerfile.repo = "https://github.com/bryanhonof/docker-spigot-buildtools"
+
 # The link to get the BuildTools.jar from
 ENV BUILDTOOLS_URL https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 
